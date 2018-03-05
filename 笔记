@@ -1,0 +1,30 @@
+1, 模块引用
+
+2，路由使用
+
+3，嵌套路由/子路由
+  children
+
+4，引入 bootstrap 
+
+5，ajax请求插件
+  vue-resource
+
+  Vue.http.options.headers = {
+    'X-Auth-Token': '2982864e039b43cba26a79755f6bfa04'
+  }
+  this.$http.get('/api/hm_users?filters=%7B%7D&page_size=30')
+    .then((res) => {
+    }, (error) => {
+    })
+
+6，跨域代理
+  proxyTable: {
+    '/api': {
+      target: 'http://cxoa.e-troin.cn/v1/',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': ''
+      }
+    }    
+  }
